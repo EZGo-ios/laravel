@@ -1,0 +1,70 @@
+/*-- Fonts --*/
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+.form-spacing-top{
+	margin-top:40px;
+}
+
+h1 {
+  color: #032030;
+  font-weight: 800;
+  font-size:45px;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+  text-align:center;
+}
+
+.btn btn-lg btn-block btn-primary btn-margin {
+	color:#0FF;
+}
+
+table{
+    width:100%;
+    table-layout: fixed;
+    margin-top:30px;
+}
+
+.tbl-header{
+    background-color: rgba(3,32,48,1);
+    color:#fff;
+    
+}
+ 
+.tbl-content{
+    /*overflow-x:auto;*/
+    margin-top: 0px;
+	  margin-bottom:30px;
+    background-color: rgba(255,225,255,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+th{
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size:30px;
+    text-transform: uppercase;
+}
+
+td{
+    padding: 15px;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size:23px;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}

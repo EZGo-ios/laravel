@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*---- Fonts ----*/
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+
+
+body {
+	font-family: 'cwTeXYen', sans-serif;
+	background-color:rgba(0, 153, 68, 0.5);
+	background-image:
+	repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+	linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+	background-size: 70px 120px;
+}
+
+.grid figure figcaption {
+	color:#f9f1f1;
+	text-shadow: 2px 2px #04364f;
+}
+
+/*
+figure.effect-ming {
+	background:#ffffff;
+}
+*/
+
+.zoologo {	
+	text-align:center;
+	margin-top:25px;
+}
+
+.zoologo img {
+	width:280px;
+	height:110px;
+}
+
+figure {
+    position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:1px 1px 3px 0px #000;
+}
