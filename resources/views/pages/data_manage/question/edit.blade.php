@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', '| animal_edit')
+@section('title', '| question_edit')
 
 @section('stylesheets')
 	{!! Html::style('css/parsley.css') !!}

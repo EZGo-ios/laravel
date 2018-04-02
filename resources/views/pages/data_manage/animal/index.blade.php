@@ -33,13 +33,12 @@
 	  	</thead>
   		<tbody>
 	  		@foreach ($animals as $animalData)
-				<tr  class="tbl-content">
+				<tr class="tbl-content">
 			      	<td scope="row">{{ $animalData -> animal_name }}</td>
 			      	<td>{{ $animalData -> location -> lng }}</td>
 			      	<td>{{ $animalData -> location -> lat }}</td>
 
 			      	<td>
-
 			      		{!! Form::open(['route' => 'animalPosts.show', 'method' => 'get']) !!}
 				      		{{ Form::hidden('animal_id', $animalData -> animal_id) }}
 				      		{{ Form::hidden('location_id', $animalData -> location_id) }}
