@@ -3,7 +3,9 @@
 @section('title', '| question_edit')
 
 @section('stylesheets')
-	{!! Html::style('css/parsley.css') !!}
+	{!! Html::style('css/parsley.css') !!}  
+	{!! Html::style('css/jeff_css/question_css/formCSS_Questions.css') !!}
+    {!! Html::style('css/jeff_css/myCSS.css') !!}
 @endsection
 
 @section('content')
@@ -13,14 +15,17 @@
 
 				{{ Form::hidden('question_id', $questionData -> question_id) }}
 				
-			    {{ Form::label('worksheet_name', '主題：', ['class' => 'form-spacing-top']) }}
+			    {{ Form::label('worksheet_name', '主題：') }}
 				{{ Form::Select('worksheet_name', $works, $questionData -> worksheet_id, ['class' => 'form-control']) }}
+				<div class="border"></div>
 
-				{{ Form::label('animal_name', '動物名稱：', ['class' => 'form-spacing-top']) }}
+				{{ Form::label('animal_name', '動物名稱：') }}
 				{{ Form::Select('animal_name', $ani, $questionData -> animal_id, ['class' => 'form-control']) }}
+				<div class="border"></div>
 				
-				{{ Form::label('question', '題目：', ['class' => 'form-spacing-top']) }}
+				{{ Form::label('question', '題目：') }}
 				{{ Form::text('question', $questionData -> question, ['class' => 'form-control', 'required', 'maxlength' => '255']) }}
+				<div class="border"></div>
 				
 				<div class="select" id="select">
 					@php ($items = 0)
@@ -28,40 +33,41 @@
 						
 						@php ($items ++)
 						<div class="item_{{ $items }}" id="item_{{ $items }}">
-							{{ Form::label('qOption_'.$items, '選項'.$items.'：', ['class' => 'form-spacing-top', 'id' => 'lblOption_'.$items] ) }} 
+							{{ Form::label('qOption_'.$items, '選項'.$items.'：', ['id' => 'lblOption_'.$items] ) }} 
 							
 							{{ Form::text('qOption_'.$items, $option -> qOption, ['class' => 'form-control', 'required', 'maxlength' => '255']) }}
 
 							{{ Form::button('刪除', ['class' => 'form-control btn btn-primary', 
 													'onclick' => 'deleteElement(item_'.$items.', '.$items.')', 
 													'id' => 'btnDelete_'.$items]) }}
+							<p>
 						</div>
 					@endforeach
 				</div>
-
-				{{ Form::button('新增：', ['class' => 'form-spacing-top btn btn-primary', 'onclick' => 'addSelect_item()'] ) }}
 				<br>
+				{{ Form::button('新增選項', ['class' => 'btn btn-primary', 'onclick' => 'addSelect_item()'] ) }}
+				<br>
+				<div class="border"></div>
 
-				{{ Form::label('answer', '答案：', ['class' => 'form-spacing-top'] ) }}
-				<div class="answer">
-					<div class="row">
-						<div class="col-md-1">
-							選項
-						</div>
-
-						<div class="col-md-11">
-							{{ Form::text('answer', $questionData -> answer, 
-												['class' 			 => 'form-control', 
-												 'required' 	 	 => '', 
-												 'data-parsley-type' => "integer", 
-												 'min' 		 		 => '1', 
-												 'max' 		 		 => $items]) }}
-						</div>
-					</div>
+				{{ Form::label('answer', '答案：', ['class' => ''] ) }}
+			
+				<div class="col-md-2">
+					選項
 				</div>
 
+				<div class="col-md-10">
+					{{ Form::text('answer', $questionData -> answer, 
+										['class' 			 => 'form-control', 
+										 'required' 	 	 => '', 
+										 'data-parsley-type' => "integer", 
+										 'min' 		 		 => '1', 
+										 'max' 		 		 => $items]) }}
+				</div>
+					
+				<div class="border"></div>
+
 				<br>
-				{{ Form::label('description', '答案解釋：', ['class' => 'form-spacing-top']) }}
+				{{ Form::label('description', '答案解釋：') }}
 				
 				{{ Form::checkbox('exist', 1, true, ['onChange' => 'enableObject(exist, existDesc, description)', 'id' => 'exist']) }}
 				{{ Form::label('exist', '從已有的解釋清單選取')}}
@@ -73,11 +79,11 @@
 
 				<div class="row">
 					<div class="col-md-6">
-						{{ Html::linkRoute('questionPosts.index', 'Cancel', array(), array('class' => 'btn btn-secondary btn-block form-spacing-top')) }}	
+						{{ Html::linkRoute('questionPosts.index', '<< 取消', array(), array('class' => 'btn btn-secondary btn-block ')) }}	
 					</div>
 
 					<div class="col-md-6">
-						{{ Form::submit('更新', ['class' => 'btn btn-block btn-success form-spacing-top']) }}
+						{{ Form::submit('修改', ['class' => 'btn btn-block btn-success ']) }}
 					</div>
 				</div>
 

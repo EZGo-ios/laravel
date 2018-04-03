@@ -4,7 +4,7 @@
 
 @section('stylesheets')
 	{!! Html::style('css/parsley.css') !!}
-	{!! Html::style('css/jeff_css/formCSS.css') !!}
+	{!! Html::style('css/jeff_css/animal_css/formCSS.css') !!}
 	{!! Html::style('css/jeff_css/myCSS.css') !!}
 @endsection
 

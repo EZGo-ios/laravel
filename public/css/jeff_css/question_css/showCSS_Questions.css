@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	background-color:rgba(255, 255, 255, 0.5);
+	border-radius:20px;
+	box-shadow:3px 3px 0px 0px #999;
+}
+
+.content {
+	margin-top:50px;
+	padding:20px;
+	margin-bottom:50px;
+	/*background-color:#fff;*/
+}
+
+.col-md-6 { 
+	font-size:28px;
+	font-weight:550;
+	/*margin-top:50px;*/
+	margin-right:90px;
+	padding:30px;
+	color:#fff;
+	background-color:rgba(3, 32, 48, 0.85);
+	border: 2px dashed  #ffffff;
+	box-shadow: 0 0 0 8px rgba(3, 32, 48, 0.85);
+	border-radius:20px;
+}
+
+h1 {
+	border-bottom:solid 3px #fff;
+	padding-bottom:10px;
+}
+
+p.lead {
+	font-size:25px;
+}
+
+.col-md-5 {
+	margin-top:50px;
+}
+
+.card-header {
+	font-size:30px;
+	height:80px;
+	padding:20px;
+	background-color:#032030;
+	color:#fff;
+}
+
+.title {
+	font-size:35px;
+	text-align:center;
+}
+
+.card-body {
+	height:200px;
+}

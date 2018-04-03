@@ -3,7 +3,7 @@
 @section('title', '| animal_index')
 
 @section('stylesheets')
-	{!! Html::style('css/jeff_css/style.css') !!}
+	{!! Html::style('css/jeff_css/animal_css/style.css') !!}
 	{!! Html::style('css/jeff_css/myCSS.css') !!}
 @endsection
  	
@@ -53,7 +53,5 @@
   	<div class="row justify-content-md-center">
   		{{ $animals -> links() }}
   	</div>
-	
-
 @endsection
 

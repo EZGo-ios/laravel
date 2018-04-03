@@ -3,7 +3,7 @@
 @section('title', '| index')
 
 @section('stylesheets')
-	{!! Html::style('css/jeff_css/set2.css') !!}
+	{!! Html::style('css/jeff_css/index_css/set2.css') !!}
 	{!! Html::style('css/jeff_css/myCSS.css') !!}
 @endsection
 	

@@ -4,7 +4,7 @@
 
 @section('stylesheets')
 	{!! Html::style('css/parsley.css') !!}
-	{!! Html::style('css/jeff_css/formCSS.css') !!}
+	{!! Html::style('css/jeff_css/animal_css/formCSS.css') !!}
 	{!! Html::style('css/jeff_css/myCSS.css') !!}
 @endsection
 
@@ -30,11 +30,11 @@
                     
 				<div class="row">
 					<div class="col-md-6">
-						{{ Html::linkRoute('animalPosts.index', '取消', array(), array('class' => 'btn btn-secondary btn-block')) }}	
+						{{ Html::linkRoute('animalPosts.index', '<< 取消', array(), array('class' => 'btn btn-secondary btn-block')) }}	
 					</div>
 
 					<div class="col-md-6">
-						{{ Form::submit('更新', ['class' => 'btn btn-block btn-success'])}}
+						{{ Form::submit('修改', ['class' => 'btn btn-block btn-success'])}}
 					</div>
 				</div>
 				

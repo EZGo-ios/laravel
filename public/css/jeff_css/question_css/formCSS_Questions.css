@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.col-md-8 {
+	font-size:28px;
+	font-weight:550;
+	margin-top:30px;
+	margin-bottom:30px;
+	padding:20px;
+	color:#fff;
+	background-color:rgba(3, 32, 48, 0.85);
+	border: 2px dashed  #ffffff;
+	box-shadow: 0 0 0 8px rgba(3, 32, 48, 0.85);
+	border-radius:20px;
+}
+
+.border{
+	border-bottom:5px solid #fff;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.row{
+	margin-top:30px;
+}

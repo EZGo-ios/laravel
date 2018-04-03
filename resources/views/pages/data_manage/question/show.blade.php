@@ -2,9 +2,14 @@
 
 @section('title', '| question_show')
 
+@section("stylesheets")   
+	{!! Html::style('css/jeff_css/myCSS.css') !!}
+	{!! Html::style('css/jeff_css/question_css/showCSS_Questions.css') !!}
+@stop
+
 @section('content')
 	<div class="row">
-		<div class="col-md-7">
+		<div class="offset-md-3 col-md-6 ">
 			<h1>主題：{{ $questionData -> worksheet -> worksheet_name }}</h1>
 			<p class='lead'>動物：{{ $questionData -> animal -> animal_name }}</p>
 			<p class='lead'>題目：{{ $questionData -> question }}</p>
@@ -29,11 +34,14 @@
 		        </div>
 
 		        <div class="card-body">	
+		        	
+		        	<br>
+
 		            <div class="row">
 		                <div class="col-sm-6">
 		                    {!! Form::open(['route' => 'questionPosts.edit', 'method' => 'get']) !!}
 		                        {{ Form::hidden('question_id', $questionData -> question_id) }}
-		                        {{ Form::submit('更新', ['class' => 'btn btn-primary btn-block']) }}
+		                        {{ Form::submit('修改', ['class' => 'btn btn-primary btn-block']) }}
 		                    {!! Form::close() !!}
 		                                                                
 		                </div>
@@ -44,8 +52,10 @@
 		                </div>               
 		            </div>
 
+					<br>
+
 		            <div class="row">
-		                <div class="col-md-12">
+		                <div class="col-sm-12">
 		                    {{ Html::linkRoute('questionPosts.index', '<< 取消', [], array('class' => 'btn btn-secondary btn-block')) }}	
 		                </div>
 		            </div>
