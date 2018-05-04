@@ -13,7 +13,7 @@
 
 Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::resource('animalPosts', 'AnimalPostsController', ['except' => ['show', 'edit', 'update', 'destroy']]);
-Route::get('/animalPosts/show', ['as' => 'animalPosts.show', 'uses' => 'AnimalPostsController@show']);
+Route::get('/animalPosts/show/{animal_id}/{location_id}', ['as' => 'animalPosts.show', 'uses' => 'AnimalPostsController@show']);
 Route::get('/animalPosts/edit', ['as' => 'animalPosts.edit', 'uses' => 'AnimalPostsController@edit']);
 Route::put('/animalPosts/update', ['as' => 'animalPosts.update', 'uses' => 'AnimalPostsController@update']);
 Route::delete('/animalPosts/delete', ['as' => 'animalPosts.destroy', 'uses' => 'AnimalPostsController@destroy']);

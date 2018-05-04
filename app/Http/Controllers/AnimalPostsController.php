@@ -72,9 +72,9 @@ class AnimalPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($animal_id, $location_id)
     {
-        $animalData = Animal::where('animal_id', $request -> animal_id) -> where('location_id', $request -> location_id) -> first();
+        $animalData = Animal::where('animal_id', $animal_id) -> where('location_id', $location_id) -> first();
         return view('pages/data_manage/animal/show') -> withAnimalData($animalData);
     }
 
@@ -86,10 +86,8 @@ class AnimalPostsController extends Controller
      */
     public function edit(Request $request)
     {
-  
-       $animalData = Animal::where('animal_id', $request -> animal_id) -> where('location_id', $request -> location_id) -> first();
+        $animalData = Animal::where('animal_id', $request -> animal_id) -> where('location_id', $request -> location_id) -> first();
         return view('pages/data_manage/animal/edit') -> withAnimalData($animalData);
-
     }
 
     /**
@@ -118,7 +116,7 @@ class AnimalPostsController extends Controller
         $animal -> save();
 
         Session::flash('success', 'this post was sucessfully saved');
-        return redirect()->route('animalPosts.show');
+        return redirect()->route('animalPosts.show', [$request -> animal_id, $request -> location_id]);
 
        
     }

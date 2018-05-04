@@ -39,11 +39,7 @@
 			      	<td>{{ $animalData -> location -> lat }}</td>
 
 			      	<td>
-			      		{!! Form::open(['route' => 'animalPosts.show', 'method' => 'get']) !!}
-				      		{{ Form::hidden('animal_id', $animalData -> animal_id) }}
-				      		{{ Form::hidden('location_id', $animalData -> location_id) }}
-				      		{{ Form::submit('查看', ['class' => 'btn btn-primary']) }}
-			      		{!! Form::close() !!}
+			      		<a href="{{ Route('animalPosts.show', [$animalData->animal_id, $animalData->location->location_id]) }}" class="btn btn-primary">查看</a>
 			      	</td>
 	    		</tr>
 	    	@endforeach	  			
