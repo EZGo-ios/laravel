@@ -17,11 +17,8 @@
             <h1>題目資料</h1>
         </div>
 
-        
-    
         <div class="col-md-2">
-            <a href="{{ route('questionPosts.create') }}" class="btn btn-lg btn-block btn-primary btn-margin">新增</a>  
-            <a href="{{ route('logout') }}" class="float-right">Logout</a>
+            <a href="{{ route('questionPosts.create') }}" class="btn btn-lg btn-block btn-primary btn-margin">新增</a>
         </div>
     </div><!-- end of .row -->
 

@@ -118,7 +118,7 @@ class AnimalPostsController extends Controller
         $animal -> save();
 
         Session::flash('success', 'this post was sucessfully saved');
-        return redirect()->route('animalPosts.index');
+        return redirect()->route('animalPosts.show');
 
        
     }

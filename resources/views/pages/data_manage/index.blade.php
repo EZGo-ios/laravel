@@ -11,6 +11,7 @@
 
 	<div class="zoologo">
     	<img src="images/zoologoWithWood.png">
+    	<a href="{{ route('logout') }}" class="float-right btn btn-primary btn-sm">Logout</a>
     </div>
     	
 	<div class="grid">
