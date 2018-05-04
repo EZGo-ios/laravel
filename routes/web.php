@@ -18,9 +18,7 @@ Route::get('/animalPosts/edit', ['as' => 'animalPosts.edit', 'uses' => 'AnimalPo
 Route::put('/animalPosts/update', ['as' => 'animalPosts.update', 'uses' => 'AnimalPostsController@update']);
 Route::delete('/animalPosts/delete', ['as' => 'animalPosts.destroy', 'uses' => 'AnimalPostsController@destroy']);
 
-Route::resource('questionPosts', 'QuestionPostsController', ['except' => ['show', 'edit', 'update']]);
-Route::get('/questionPosts/show', ['as' => 'questionPosts.show', 'uses' => 'QuestionPostsController@show']);
-Route::get('/questionPosts/edit', ['as' => 'questionPosts.edit', 'uses' => 'QuestionPostsController@edit']);
+Route::resource('questionPosts', 'QuestionPostsController', ['except' => ['update']]);
 Route::put('/questionPosts/update', ['as' => 'questionPosts.update', 'uses' => 'QuestionPostsController@update']);
 
 //login
