@@ -39,10 +39,7 @@
 
 		            <div class="row">
 		                <div class="col-sm-6">
-		                    {!! Form::open(['route' => 'questionPosts.edit', 'method' => 'get']) !!}
-		                        {{ Form::hidden('question_id', $questionData -> question_id) }}
-		                        {{ Form::submit('修改', ['class' => 'btn btn-primary btn-block']) }}
-		                    {!! Form::close() !!}
+		                    <a href="{{ Route('questionPosts.edit', $questionData -> question_id) }}" class="btn btn-primary btn-block">修改</a>
 		                                                                
 		                </div>
 		                <div class="col-sm-6">

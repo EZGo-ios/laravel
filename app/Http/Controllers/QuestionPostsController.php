@@ -128,10 +128,10 @@ class QuestionPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($question_id)
     {
-        $questionData = Question::where('question_id', $request -> question_id) -> first();
-        $optionData = Question_option::where('question_id', $request -> question_id) -> get();
+        $questionData = Question::where('question_id', $question_id) -> first();
+        $optionData = Question_option::where('question_id', $question_id) -> get();
 
         return view('pages/data_manage/question/show') 
             -> withQuestionData($questionData)
@@ -144,10 +144,10 @@ class QuestionPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request)
+    public function edit($question_id)
     {
-        $questionData = Question::where('question_id', $request -> question_id) -> first();
-        $optionData = Question_option::where('question_id', $request -> question_id) -> get();
+        $questionData = Question::where('question_id', $question_id) -> first();
+        $optionData = Question_option::where('question_id', $question_id) -> get();
 
         $animals = Animal::all();
         $ani = [];
@@ -166,7 +166,6 @@ class QuestionPostsController extends Controller
         foreach ($descriptions as $description) {
             $descrip[$description -> description_id] = $description -> description;
         }
-
 
         return view('pages/data_manage/question/edit')
             -> withQuestionData($questionData)
@@ -217,7 +216,7 @@ class QuestionPostsController extends Controller
         }
         
         Session::flash('success', 'this post was sucessfully saved');
-        return redirect()->route('questionPosts.index');       
+        return redirect()->route('questionPosts.show', $request -> question_id);       
     }
 
     /**

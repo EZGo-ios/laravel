@@ -43,10 +43,7 @@
 
                     </td>
                     <td scope="row">
-                      {!! Form::open(['route' => 'questionPosts.show', 'method' => 'get']) !!}
-                              {{ Form::hidden('question_id', $question -> question_id) }}
-                              {{ Form::submit('查看', ['class' => 'btn btn-primary']) }}
-                          {!! Form::close() !!}
+                        <a href="{{ Route('questionPosts.show', $question -> question_id) }}" class="btn btn-primary">查看</a>
                     </td>
                 </tr>
             @endforeach
